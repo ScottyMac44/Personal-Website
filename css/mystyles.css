@@ -1,13 +1,23 @@
 body {
-    background-color: cadetblue;
+    background-color: #284a4b;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1,h2 {
-    color: aqua;
+h1,h2,h3 {
+    color: #00ffff;
     text-align: center;
 }
 
-p {
-    color: aquamarine;
+p,ul { 
+    color: #7fffd4;
+    text-align: center;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+#images {
+    display: flex;
+    justify-content: center;
 }
