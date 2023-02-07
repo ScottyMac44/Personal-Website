@@ -46,3 +46,12 @@ span {
     justify-content: center;
     display: flex;
 }
+
+ul {
+  list-style-type: none;
+}
+
+.myImage {
+  display: flex;
+  justify-content: center;
+}
