@@ -1,13 +1,14 @@
 body {
-    background-color: #284a4b;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background-color: #319497;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
@@ -18,7 +19,7 @@ header {
     background-color: #333;
     overflow: hidden;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto;
     grid-gap: 20px;
   }
   
@@ -46,6 +47,12 @@ h1,h2,h3 {
   text-align: center;
 }
 
+.center {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .specialHeader {
   font-family: 'Montserrat', sans-serif;
 }
@@ -65,12 +72,18 @@ img {
   margin-left: 20px;
 }
 
-main {
+main.coursesList ul {
+  margin: 0px;
+  padding: 8px;
+  border-top: darkgray solid 2px;
+  border-bottom: darkgray solid 2px;
+}
+
+.coursesList {
   flex: 1;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: left;
   padding: 20px;
 }
 
@@ -78,4 +91,17 @@ footer {
   padding: 20px;
   text-align: center;
   background-color:#295680;
+}
+
+@media screen and (min-width: 600px) {
+
+  .topnav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .right {
+    text-align: right;
+  }
+  
 }
