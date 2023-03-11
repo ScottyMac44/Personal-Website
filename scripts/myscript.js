@@ -21,3 +21,15 @@ const courseList = [
         outline:"https://www.bcit.ca/outlines/20231089202/"
     }
 ]
+
+let courseCode
+let validInputCheck
+do {
+    validInputCheck = false
+    courseCode = prompt("Enter a 4 digit course code")
+    if (courseCode.length != 4 || isNaN(courseCode)) {
+        alert("Invalid Input!")
+    } else {
+        validInputCheck = true
+    }
+} while (validInputCheck === false)
