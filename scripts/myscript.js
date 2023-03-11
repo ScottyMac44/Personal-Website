@@ -1,4 +1,5 @@
 const courseList = [
+
     {
         code:"ACIT-1620",
         name:"Fundamental Web Technologies",
@@ -20,16 +21,58 @@ const courseList = [
         term:"Winter 2023",
         outline:"https://www.bcit.ca/outlines/20231089202/"
     }
-]
 
-let courseCode
-let validInputCheck
+];
+
+
+let courseCodeFromUser;
+let validInputCheck = false;
 do {
-    validInputCheck = false
-    courseCode = prompt("Enter a 4 digit course code")
-    if (courseCode.length != 4 || isNaN(courseCode)) {
-        alert("Invalid Input!")
+
+    courseCodeFromUser = prompt("Enter a 4 digit course code");
+
+    if (courseCodeFromUser.length != 4 || isNaN(courseCodeFromUser)) {
+
+        alert("Invalid Input!");
+
     } else {
-        validInputCheck = true
-    }
-} while (validInputCheck === false)
+
+        validInputCheck = true;
+
+    };
+
+} while (validInputCheck === false);
+
+
+let courseCodeFromList;
+let courseAlreadyExists = false;
+for (let i in courseList) {
+
+    courseCodeFromList = courseList[i].code.replace("ACIT-", "");
+
+    if (courseCodeFromList == courseCodeFromUser) {
+
+        console.log(
+            `Yes, I am taking the course ${courseList[i].code} ${courseList[i].name}`
+        );
+
+        courseAlreadyExists = true;
+        break;
+
+    };
+
+};
+
+if (!courseAlreadyExists) {
+
+    courseList.push(
+        {code:("ACIT-" + courseCodeFromUser)},
+        {name:null},
+        {description:null},
+        {term:null},
+        {outline:null}
+        );
+
+    console.log("Success! course added");
+
+};
